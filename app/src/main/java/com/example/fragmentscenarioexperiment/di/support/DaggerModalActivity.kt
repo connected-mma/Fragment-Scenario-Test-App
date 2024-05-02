@@ -21,7 +21,7 @@ import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
 abstract class DaggerModalActivity : AppCompatActivity(), HasAndroidInjector {
-    @Inject
+    @set:Inject
     var fragmentInjector: DispatchingAndroidInjector<Any>? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         // pre onCreate setup
