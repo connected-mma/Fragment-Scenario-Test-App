@@ -34,6 +34,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.preference.ktx)
     kotlin("kapt")
     implementation("com.google.dagger:dagger:2.51")
     implementation("com.google.dagger:dagger-android:2.51")
