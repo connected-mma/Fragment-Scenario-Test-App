@@ -35,7 +35,7 @@ class TestFragmentFactory : FragmentFactory() {
         return when (className) {
             ExampleFragment::class.java.name -> {
                 val fragment = ExampleFragment()
-                DaggerTestComponent.create().inject(fragment)
+                DaggerTestComponent.create().customFragmentSubcomponent().create().inject(fragment)
                 fragment
             }
             else -> super.instantiate(classLoader, className)
