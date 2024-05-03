@@ -1,11 +1,10 @@
 package com.example.fragmentscenarioexperiment.di
 
-import com.example.fragmentscenarioexperiment.fragments.ExampleFragment
+import com.example.fragmentscenarioexperiment.di.scopes.ApplicationScope
 import dagger.Component
 import dagger.android.AndroidInjectionModule
-import dagger.android.support.AndroidSupportInjectionModule
 
-@Component(modules = [AndroidInjectionModule::class])
-interface TestComponent {
-    fun inject(fragment: ExampleFragment)
-}
+@ApplicationScope
+@Component(modules = [AndroidInjectionModule::class, ActivityModule::class,
+    FragmentModule::class])
+interface TestComponent
