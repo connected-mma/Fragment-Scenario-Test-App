@@ -15,6 +15,5 @@ import javax.inject.Singleton
     FragmentModule::class
 ])
 interface ApplicationComponent: AndroidInjector<MyApplication> {
-    @Component.Factory
-    interface Factory: AndroidInjector.Factory<MyApplication>
+    fun build(): ApplicationComponent
 }
