@@ -1,12 +1,14 @@
 package com.example.fragmentscenarioexperiment
+
 import android.os.Bundle
 import android.util.Log
 import com.example.fragmentscenarioexperiment.fragments.ExampleFragment
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : PelotonActivity() {
+class StudioMainActivity : DaggerAppCompatActivity() {
 
     init {
-        Log.i("@@@","Launching ${MainActivity::class.simpleName}")
+        Log.i("@@@","Launching ${StudioMainActivity::class.simpleName}")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,4 @@ class MainActivity : PelotonActivity() {
                 .commitNow()
         }
     }
-
-
 }
