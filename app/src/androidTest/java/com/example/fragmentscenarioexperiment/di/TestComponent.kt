@@ -9,10 +9,8 @@ import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 
 @ApplicationScope
-@Component(modules = [AndroidInjectionModule::class, ActivityModule::class,
-    FragmentModule::class])
+@Component(modules = [AndroidInjectionModule::class, FragmentModule::class])
 interface TestComponent: AndroidInjector<TestApplication> {
-
     fun inject(baseTest: BaseTest)
 
     @Component.Builder
@@ -21,7 +19,6 @@ interface TestComponent: AndroidInjector<TestApplication> {
         fun application(application: TestApplication): Builder
         fun build(): TestComponent
     }
-
 }
 
 fun testAppComponent(): TestComponent = ApplicationProvider.getApplicationContext<TestApplication>().component
