@@ -9,9 +9,7 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class FragmentModule {
     @ContributesAndroidInjector(
-        modules = [
-            FragmentUtilsModule::class
-        ]
+        modules = [FragmentUtilsModule::class]
     )
     @FragmentScope
     abstract fun contributeExampleFragment(): ExampleFragment
