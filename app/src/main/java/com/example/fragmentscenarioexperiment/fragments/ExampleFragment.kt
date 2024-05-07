@@ -8,12 +8,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.fragmentscenarioexperiment.R
 import com.example.fragmentscenarioexperiment.di.support.DaggerViewHostFragment
+import com.example.fragmentscenarioexperiment.di.support.viewmodel.DaggerViewModelFragment
+import com.example.fragmentscenarioexperiment.utils.AnalyticsHandler
 import com.example.fragmentscenarioexperiment.utils.ExampleFragmentDelegate
+import com.example.fragmentscenarioexperiment.utils.data.Event
 import javax.inject.Inject
 
-class ExampleFragment : DaggerViewHostFragment() {
+class  ExampleFragment : DaggerViewHostFragment() {
 
     @Inject lateinit var delegate: ExampleFragmentDelegate
+
+    @Inject lateinit var analyticsHandler: AnalyticsHandler
 
     private lateinit var titleText: TextView
 
@@ -29,5 +34,7 @@ class ExampleFragment : DaggerViewHostFragment() {
         Log.i("@@@", "title: $title")
 
         delegate.redirectUser()
+
+        analyticsHandler.emitEvent(Event("onViewCreated", "0"))
     }
 }
