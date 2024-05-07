@@ -5,6 +5,10 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 
 @ApplicationScope
-@Component(modules = [AndroidInjectionModule::class, ActivityModule::class,
-    FragmentModule::class])
+@Component(
+    modules = [
+        AndroidInjectionModule::class,
+        ActivityModule::class,
+    ]
+)
 interface TestComponent

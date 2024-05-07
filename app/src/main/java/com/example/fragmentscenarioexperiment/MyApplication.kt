@@ -11,9 +11,16 @@ class MyApplication : DaggerApplication() {
     @Inject
     lateinit var navigator: Navigator
 
+    private var applicationInjector: AndroidInjector<out DaggerApplication>
+
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerApplicationComponent.factory().create(this).also {
-            it.inject(this)
-        }
+        return applicationInjector
+    }
+
+    init {
+        applicationInjector = DaggerApplicationComponent.factory()
+            .create(this).also {
+                it.inject(this)
+            }
     }
 }

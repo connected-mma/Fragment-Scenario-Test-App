@@ -35,13 +35,14 @@ android {
 
 dependencies {
     implementation(libs.androidx.preference.ktx)
+    implementation(libs.androidx.rules)
     kotlin("kapt")
-    implementation("com.google.dagger:dagger:2.51")
-    implementation("com.google.dagger:dagger-android:2.51")
-    implementation("com.google.dagger:dagger-android-support:2.51")
-    kapt("com.google.dagger:dagger-compiler:2.51")
-    kapt("com.google.dagger:dagger-android-processor:2.51")
-    kaptAndroidTest("com.google.dagger:dagger-compiler:2.51")
+    implementation("com.google.dagger:dagger:2.47")
+    implementation("com.google.dagger:dagger-android:2.47")
+    implementation("com.google.dagger:dagger-android-support:2.47")
+    kapt("com.google.dagger:dagger-compiler:2.47")
+    kapt("com.google.dagger:dagger-android-processor:2.47")
+    kaptAndroidTest("com.google.dagger:dagger-compiler:2.47")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
