@@ -21,6 +21,14 @@
           <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+    <!-- This should go in the debug package in the "real" app -->
+      <activity android:name=".TestActivity"
+          android:exported="true">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
     </application>
 
 </manifest>

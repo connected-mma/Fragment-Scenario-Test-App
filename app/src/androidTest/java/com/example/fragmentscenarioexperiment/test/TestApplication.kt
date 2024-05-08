@@ -1,13 +1,14 @@
-package com.example.fragmentscenarioexperiment.di
+package com.example.fragmentscenarioexperiment.test
 
 import android.app.Application
-import dagger.Component
+import com.example.fragmentscenarioexperiment.di.DaggerTestComponent
+import com.example.fragmentscenarioexperiment.di.TestComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class TestApplication: Application(), HasAndroidInjector {
+class TestApplication : Application(), HasAndroidInjector {
 
     lateinit var component: TestComponent
 
@@ -27,5 +28,4 @@ class TestApplication: Application(), HasAndroidInjector {
                 testComponent.inject(this)
             }
     }
-
 }
