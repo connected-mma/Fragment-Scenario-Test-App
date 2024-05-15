@@ -4,6 +4,7 @@ import androidx.test.core.app.ApplicationProvider
 import com.example.fragmentscenarioexperiment.BaseTest
 import com.example.fragmentscenarioexperiment.di.scopes.ApplicationScope
 import com.example.fragmentscenarioexperiment.test.TestApplication
+import com.example.fragmentscenarioexperiment.utils.AnalyticsHandler
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -23,6 +24,10 @@ interface TestComponent : AndroidInjector<TestApplication> {
     interface Builder {
         @BindsInstance
         fun application(application: TestApplication): Builder
+
+        @BindsInstance
+        fun analyticsHandler(analyticsHandler: AnalyticsHandler): Builder
+
         fun build(): TestComponent
     }
 }

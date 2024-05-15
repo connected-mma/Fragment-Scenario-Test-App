@@ -8,7 +8,7 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class TestActivityModule {
     @ContributesAndroidInjector(
-        modules = [FragmentModule::class]
+        modules = [TestFragmentModule::class]
     )
     @ActivityScope
     abstract fun contributeTestActivity(): TestActivity

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.fragmentscenarioexperiment"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -54,5 +54,6 @@ dependencies {
     debugImplementation("androidx.test:core:1.4.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
 
+    debugImplementation("org.mockito:mockito-android:5.12.0")
 
 }
